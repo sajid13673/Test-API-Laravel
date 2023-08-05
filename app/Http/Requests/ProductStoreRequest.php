@@ -22,7 +22,7 @@ class ProductStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:50',
+            'name' => 'required|string|max:50|regex:/(^([a-zA-z 0-9-]+)(\d+)?$)/u',
             'description' => 'required|string|max:250',
             'image' => 'image|mimes:jpeg,png,jpg|max:4096'
         ];
