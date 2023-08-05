@@ -24,7 +24,7 @@ class ProductStoreRequest extends FormRequest
         return [
             'name' => 'required|string|max:50|regex:/(^([a-zA-z 0-9-]+)(\d+)?$)/u',
             'description' => 'required|string|max:250',
-            'image' => 'image|mimes:jpeg,png,jpg|max:4096'
+            'image' => 'image|mimes:jpg|max:4096'
         ];
     }
     
